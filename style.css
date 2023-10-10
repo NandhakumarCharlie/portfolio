@@ -142,9 +142,10 @@ img{
     }
     .link-custom, .las{
         display: flex;
-        font-size: 18px;
+        font-size: 16px;
         padding: 5px;
     }
+
 }
 /* ABOUT */
 .card{
@@ -152,6 +153,38 @@ img{
     border-color: var(--color-base);
     color: var(--color-body);
 }
+/* work  */
+#more {display: none;}
+#myBtn{
+    background: none;
+    border: none;
+    color: var(--color-body);
+}
+#myBtn::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+#more:hover::after{
+    width: 100%;
+}
+@media(max-width:700px){
+    .contact{
+         flex-direction: column;
+         text-overflow: ellipsis;
+    }
+    .myBtn, .las{
+        display: flex;
+        font-size: 18px;
+        padding: 5px;
+    }
+}
+/* work  */
 
 /* Skill */
 .list{
